@@ -99,9 +99,11 @@ body{
 .action-buttons .main-button{
     background-color: #007AFF;
     color : white;
+    border: none
 }
 .action-buttons .side-button{
-    background-color: #ffffff
+    background-color: #F2F2F7;
+    border: none
 }
 .action-buttons img{
     width: 1.5rem;
