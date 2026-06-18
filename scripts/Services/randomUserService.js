@@ -28,7 +28,7 @@ const RandomUserService  = function(){
                 }
             }
             const data = await response.json()
-            const users = data.results
+            
             if(data.error){
                 return {
                     result: false,
@@ -47,11 +47,15 @@ const RandomUserService  = function(){
                     message: "Not enough users received"
                 }
             }
+            const users = data.results
             const mainUser = buildMainUser(users[0])
             const friends = users.slice(1).map(buildFriendUser)
             return {
                 result: true,
-                mainUser,friends
+                data: {
+                    mainUser,
+                    friends
+                }
             }
         }
         catch{
