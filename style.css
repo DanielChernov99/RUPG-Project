@@ -19,6 +19,10 @@
     flex-direction: row;
     align-items: center;
 }
+.logo-container img{
+    height: 30px;
+    width: 30px;
+}
 .action-buttons{
     display: flex;
     flex-direction: row;
@@ -84,4 +88,41 @@
     gap: 1rem;
 
     margin: 0.5rem 0;
+}
+
+.quote-card,
+.pokemon-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    
+    background-color: white;
+    border-radius: 24px;
+    padding: 0.5rem;
+
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+}
+.pokemon-image-container,
+.quote-image-container{
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 8px solid white;
+    background-color: rgb(243, 243, 243);
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pokemon-image,
+.quote-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
