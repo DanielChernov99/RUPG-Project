@@ -12,6 +12,7 @@ const Renderer = function(){
     const friendsList = document.querySelector("#friendsList")
     const friendsTitle = document.querySelector("#friendsTitle")
     const errorMessage = document.querySelector("#errorMessage")
+    const succsesMessage = document.querySelector("#succsesMessage")
 
     const fillProfile = function(mainUser){
         userImage.src = mainUser.image
@@ -68,15 +69,27 @@ const Renderer = function(){
     const renderError = function(message){
         errorMessage.textContent = message || "Something went wrong. Please check your internet connection and try again."
         errorMessage.classList.remove("hidden")
+        succsesMessage.classList.add("hidden")
     }
+
+    const renderSuccsess = function(message){
+        succsesMessage.textContent = message
+        succsesMessage.classList.remove("hidden")
+        errorMessage.classList.add("hidden")
+    }
+
     const clearError = function(){
         errorMessage.textContent = ""
         errorMessage.classList.add("hidden")
+
+        succsesMessage.textContent = ""
+        succsesMessage.classList.add("hidden")
     }
 
     return {
         render,
         renderError,
+        renderSuccsess,
         clearError,
         fillAboutme,
         fillFriends,
