@@ -16,6 +16,19 @@ body{
     font-size: 1.5rem;
     font-weight: 700
 }
+.error-message {
+    margin: 1rem 0;
+    padding: 1rem 1.25rem;
+    border-radius: 16px;
+    background-color: #fff2f2;
+    color: #b42318;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.hidden {
+    display: none;
+}
 /* ######################################## */
 /* #############   Header   ############### */
 /* ######################################## */

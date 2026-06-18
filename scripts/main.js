@@ -12,10 +12,11 @@ const saveButton = document.querySelector("#saveButton")
 
 
 generateButton.addEventListener("click", async () => {
+    renderer.clearError()
     const newProfile = await model.generateProfile()
 
     if(!newProfile.result){
-        renderer.renderError()
+        renderer.renderError(newProfile.message)
         return
     }
 

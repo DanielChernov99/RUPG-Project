@@ -11,6 +11,7 @@ const Renderer = function(){
     const pokemonName = document.querySelector("#pokemonName")
     const friendsList = document.querySelector("#friendsList")
     const friendsTitle = document.querySelector("#friendsTitle")
+    const errorMessage = document.querySelector("#errorMessage")
 
     const fillProfile = function(mainUser){
         userImage.src = mainUser.image
@@ -64,13 +65,19 @@ const Renderer = function(){
         fillPokemon(profile.pokemonName, profile.pokemonImage)
         fillAboutme(profile.aboutMe)
     }
-    const renderError = function(){
-
+    const renderError = function(message){
+        errorMessage.textContent = message || "Something went wrong. Please check your internet connection and try again."
+        errorMessage.classList.remove("hidden")
+    }
+    const clearError = function(){
+        errorMessage.textContent = ""
+        errorMessage.classList.add("hidden")
     }
 
     return {
         render,
         renderError,
+        clearError,
         fillAboutme,
         fillFriends,
         fillQuote,
