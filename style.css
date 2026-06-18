@@ -3,6 +3,14 @@
     margin:0;
     box-sizing: border-box;
 }
+body{
+    font-family: Arial, sans-serif;
+}
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
 /* ######################################## */
 /* #############   Header   ############### */
 /* ######################################## */
@@ -12,23 +20,33 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid black;
+    padding: 1rem 1.5rem;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 .logo-container{
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 1rem;
+    gap: 0.5rem;
 }
 .logo-container img{
     height: 30px;
     width: 30px;
+}
+.logo-txt {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
 }
 .action-buttons{
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 0.5rem
+    
     
 }
 .button-container{
@@ -41,17 +59,27 @@
     border: 0.1rem solid rgba(142, 142, 147, 0.705);
     border-radius: 24px; 
     corner-shape: squircle;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
 
 }
 .action-buttons .main-button{
-    background-color: #007AFF
+    background-color: #007AFF;
+    color : white;
 }
 .action-buttons .side-button{
     background-color: #ffffff
 }
 .action-buttons img{
-    height: 30px;
-    width: 30px;
+    width: 1.5rem;
+    aspect-ratio: 1/1
 }
 /* ######################################## */
 /* ##########   Profile Card   ############ */
