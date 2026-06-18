@@ -14,6 +14,7 @@ const Renderer = function(){
     const errorMessage = document.querySelector("#errorMessage")
     const succsesMessage = document.querySelector("#succsesMessage")
     const profileOptionsContainer = document.querySelector(".select-profile-container")
+    const mainContainer = document.querySelector(".main-container")
 
     const toProperCase = function(text){
         return text[0].toUpperCase() + text.slice(1)
@@ -70,6 +71,7 @@ const Renderer = function(){
         fillQuote(profile.quote)
         fillPokemon(profile.pokemonName, profile.pokemonImage)
         fillAboutme(profile.aboutMe)
+        mainContainer.classList.remove("hidden")
     }
     const renderError = function(message){
         errorMessage.textContent = message || "Something went wrong. Please check your internet connection and try again."
