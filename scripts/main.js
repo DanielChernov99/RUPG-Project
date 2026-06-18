@@ -15,7 +15,7 @@ generateButton.addEventListener("click", async () => {
     const newProfile = await model.generateProfile()
 
     if(!newProfile.result){
-        console.log(newProfile.message)
+        renderer.renderError()
         return
     }
 
