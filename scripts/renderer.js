@@ -18,7 +18,7 @@ const Renderer = function(){
 
     }
     const fillQuote = function(quote){
-
+        quoteText.textContent = quote
     }
     const fillPokemon = function(name,image){
         pokemonName.textContent = name
