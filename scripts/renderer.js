@@ -85,12 +85,20 @@ const Renderer = function(){
         succsesMessage.textContent = ""
         succsesMessage.classList.add("hidden")
     }
+    const showProfileOptions = function(profiles){
+
+    }
+    const hideProfileOptions = function(){
+
+    }
 
     return {
         render,
         renderError,
         renderSuccsess,
         clearError,
+        showProfileOptions,
+        hideProfileOptions,
         fillAboutme,
         fillFriends,
         fillQuote,

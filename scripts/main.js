@@ -11,6 +11,11 @@ const saveButton = document.querySelector("#saveButton")
 
 let currentUser = null
 
+const saveUsersToLocalStorage = function(){
+
+}
+
+
 generateButton.addEventListener("click", async () => {
     renderer.clearError()
     const newProfile = await model.generateProfile()
