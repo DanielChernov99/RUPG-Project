@@ -21,7 +21,8 @@ const Renderer = function(){
 
     }
     const fillPokemon = function(name,image){
-
+        pokemonName.textContent = name
+        pokemonImage.src = image
     }
     const fillAboutme = function(aboutMeText){
         aboutText.textContent = aboutMeText
