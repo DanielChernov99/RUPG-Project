@@ -41,3 +41,24 @@ saveButton.addEventListener("click", () => {
         renderer.clearError()
     },2000)
 })
+
+loadButton.addEventListener("click", () => {
+    renderer.clearError()
+
+    const savedProfile = localStorage.getItem("savedProfile")
+
+    if(!savedProfile){
+        renderer.renderError("No saved profile found.")
+        return
+    }
+
+    const parsedProfile = JSON.parse(savedProfile)
+
+    currentUser = parsedProfile
+    renderer.render(currentUser)
+
+    renderer.renderSuccsess("Profile loaded successfully.")
+    setTimeout(()=>{
+        renderer.clearError()
+    },2000)
+})
