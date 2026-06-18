@@ -10,7 +10,7 @@ const Model = function(){
     const randomBaconService = RandomBaconService()
 
     const generateProfile = async function(){
-        const [usersResult, quoteResult,pokemonResult,baconService] = await Promise.all([
+        const [usersResult, quoteResult,pokemonResult,baconResult] = await Promise.all([
             randomUserService.getRandomUsers(),
             randomQuoteService.getRandomQuote(),
             randomPokemonService.getRandomPokemon(),
@@ -22,10 +22,10 @@ const Model = function(){
         if(!quoteResult.result){
             return quoteResult
         }
-        if(!pokemonResult){
+        if(!pokemonResult.result){
             return pokemonResult
         }
-        if(!baconService){
+        if(!baconResult.result){
             return baconService
         }
         return {
