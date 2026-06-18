@@ -18,6 +18,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: 1rem;
 }
 .logo-container img{
     height: 30px;
@@ -27,6 +28,26 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 0.5rem
+    
+}
+.button-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.action-buttons button{
+    border: 0.1rem solid rgba(142, 142, 147, 0.705);
+    border-radius: 24px; 
+    corner-shape: squircle;
+
+}
+.action-buttons .main-button{
+    background-color: #007AFF
+}
+.action-buttons .side-button{
+    background-color: #ffffff
 }
 .action-buttons img{
     height: 30px;
