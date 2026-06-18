@@ -13,7 +13,9 @@ const Renderer = function(){
     const friendsTitle = document.querySelector("#friendsTitle")
 
     const fillProfile = function(mainUser){
-        userImage.src = mainUser.image 
+        userImage.src = mainUser.image
+        userFullName.textContent = `${mainUser.firstName} ${mainUser.lastName}`
+        userLocation.textContent = `${mainUser.city}, ${mainUser.state} , ${mainUser.country}`
          
     }
     const fillFriends = function(friends){
