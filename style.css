@@ -44,7 +44,6 @@ body{
 
 .header-container{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
@@ -54,7 +53,6 @@ body{
 }
 .logo-container{
     display: flex;
-    flex-direction: row;
     align-items: center;
     margin: 1rem;
     gap: 0.5rem;
@@ -70,7 +68,6 @@ body{
 }
 .action-buttons{
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 0.5rem
     
@@ -78,7 +75,6 @@ body{
 }
 .button-container{
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: flex-start;
 }
@@ -182,7 +178,6 @@ body{
 }
 .profile-content-container{
     display: flex;
-    flex-direction: row;
     justify-content: flex-start;
     gap: 1rem;
     align-items: center;
@@ -242,7 +237,6 @@ body{
 
 .info-cards-container {
     display: flex;
-    flex-direction: row;
     gap: 1rem;
 
     margin: 0.5rem 0;
@@ -251,7 +245,6 @@ body{
 .quote-card,
 .pokemon-card {
     display: flex;
-    flex-direction: row;
     align-items: center;
     flex: 1;
     
@@ -268,13 +261,8 @@ body{
     width:40%;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-
-    overflow: hidden;
-
     border: 8px solid white;
-
     flex-shrink: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -333,13 +321,11 @@ body{
 
 .friends-header-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
 
 .friends-list-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
@@ -411,7 +397,6 @@ body{
 
 .about-header-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 0.5rem;
 }
@@ -439,16 +424,6 @@ body{
     object-fit: contain;
 }
 
-.about-title-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.about-content-container {
-    display: flex;
-    flex-direction: column;
-}
 
 .about-text {
     margin: 0;
@@ -523,7 +498,6 @@ body{
     }
     .quote-card,
     .pokemon-card {
-        flex-direction: row;
         align-items: center;
         justify-content: flex-start;
     }
