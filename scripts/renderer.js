@@ -13,6 +13,7 @@ const Renderer = function(){
     const friendsTitle = document.querySelector("#friendsTitle")
     const errorMessage = document.querySelector("#errorMessage")
     const succsesMessage = document.querySelector("#succsesMessage")
+    const profileOptionsContainer = document.querySelector(".select-profile-container")
 
     const fillProfile = function(mainUser){
         userImage.src = mainUser.image
@@ -85,11 +86,35 @@ const Renderer = function(){
         succsesMessage.textContent = ""
         succsesMessage.classList.add("hidden")
     }
-    const showProfileOptions = function(profiles){
+    const showProfileOptions = function(profileNames){
+        profileOptionsContainer.innerHTML = ""
 
+        if(profileNames.length === 0){
+            const emptyMessage = document.createElement("p")
+            emptyMessage.textContent = "No saved profiles"
+            emptyMessage.classList.add("profile-option-empty")
+
+            profileOptionsContainer.appendChild(emptyMessage)
+            profileOptionsContainer.classList.remove("hidden")
+            return
+        }
+
+        profileNames.forEach(profileName => {
+            const profileOption = document.createElement("button")
+
+            profileOption.type = "button"
+            profileOption.classList.add("profile-option")
+            profileOption.dataset.profileName = profileName
+            profileOption.textContent = profileName
+
+            profileOptionsContainer.appendChild(profileOption)
+        })
+
+        profileOptionsContainer.classList.remove("hidden")
     }
     const hideProfileOptions = function(){
-
+        profileOptionsContainer.innerHTML = ""
+        profileOptionsContainer.classList.add("hidden")
     }
 
     return {
