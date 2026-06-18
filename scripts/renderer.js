@@ -15,6 +15,10 @@ const Renderer = function(){
     const succsesMessage = document.querySelector("#succsesMessage")
     const profileOptionsContainer = document.querySelector(".select-profile-container")
 
+    const toProperCase = function(text){
+        return text[0].toUpperCase() + text.slice(1)
+    }
+
     const fillProfile = function(mainUser){
         userImage.src = mainUser.image
         userFullName.textContent = `${mainUser.firstName} ${mainUser.lastName}`
@@ -53,7 +57,7 @@ const Renderer = function(){
         quoteText.textContent = quote
     }
     const fillPokemon = function(name,image){
-        pokemonName.textContent = name
+        pokemonName.textContent = toProperCase(name)
         pokemonImage.src = image
     }
     const fillAboutme = function(aboutMeText){
@@ -123,12 +127,7 @@ const Renderer = function(){
         renderSuccsess,
         clearError,
         showProfileOptions,
-        hideProfileOptions,
-        fillAboutme,
-        fillFriends,
-        fillQuote,
-        fillPokemon,
-        fillProfile
+        hideProfileOptions
     }
 }
 
