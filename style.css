@@ -130,6 +130,9 @@ body{
 
     z-index: 10;
 }
+.select-profile-container.hidden {
+    display: none;
+}
 
 .profile-option {
     border: none;
