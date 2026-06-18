@@ -26,7 +26,7 @@ const Model = function(){
             return pokemonResult
         }
         if(!baconResult.result){
-            return baconService
+            return baconResult
         }
         return {
             result: true,
@@ -34,6 +34,8 @@ const Model = function(){
                 mainUser: usersResult.data.mainUser,
                 friends: usersResult.data.friends,
                 quote: quoteResult.data,
+                pokemonName: pokemonResult.data.name,
+                pokemonImage: pokemonResult.data.image,
                 aboutMe:baconService.data
             }
         }
