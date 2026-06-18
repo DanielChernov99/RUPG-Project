@@ -1,20 +1,20 @@
 import RandomUserService from "./services/randomUserService.js"
 import RandomQuoteService from "./services/randomQuoteService.js"
-import RandomPokemonService from "./Services/randomPokemonService.js"
-import RandomBaconService from "./Services/randomBaconService.js"
+import RandomPokemonService from "./services/randomPokemonService.js"
+import RandomBaconService from "./services/randomBaconService.js"
 
 const Model = function(){
     const randomUserService = RandomUserService()
     const randomQuoteService = RandomQuoteService()
     const randomPokemonService = RandomPokemonService()
-    const randomBacomService = RandomBaconService()
+    const randomBaconService = RandomBaconService()
 
     const generateProfile = async function(){
         const [usersResult, quoteResult,pokemonResult,baconService] = await Promise.all([
             randomUserService.getRandomUsers(),
             randomQuoteService.getRandomQuote(),
             randomPokemonService.getRandomPokemon(),
-            randomBacomService.getRandomBacon()
+            randomBaconService.getRandomBacon()
         ])
         if(!usersResult.result){
             return usersResult
