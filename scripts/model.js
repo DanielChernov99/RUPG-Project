@@ -36,7 +36,7 @@ const Model = function(){
                 quote: quoteResult.data,
                 pokemonName: pokemonResult.data.name,
                 pokemonImage: pokemonResult.data.image,
-                aboutMe:baconService.data
+                aboutMe:baconResult.data
             }
         }
     }
