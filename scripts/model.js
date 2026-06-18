@@ -4,11 +4,13 @@ import RandomQuoteService from "./services/randomQuoteService.js"
 const Model = function(){
     const randomUserService = RandomUserService()
     const randomQuoteService = RandomQuoteService()
+    const randomPokemonService = RandomPokemonService()
 
     const generateProfile = async function(){
-        const [usersResult, quoteResult] = await Promise.all([
+        const [usersResult, quoteResult,pokemonResult] = await Promise.all([
             randomUserService.getRandomUsers(),
-            randomQuoteService.getRandomQuote()
+            randomQuoteService.getRandomQuote(),
+            randomPokemonService.getRandomPokemon()
         ])
         if(!usersResult.result){
             return usersResult
