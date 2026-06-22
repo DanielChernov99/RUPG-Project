@@ -16,8 +16,16 @@ body{
     font-size: 1.5rem;
     font-weight: 700
 }
+.message-area {
+    position: relative;
+    z-index: 1000;
+}
 .error-message {
-    margin: 1rem 0;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    margin: 0;
     padding: 1rem 1.25rem;
     border-radius: 16px;
     background-color: #fff2f2;
@@ -26,7 +34,11 @@ body{
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 .succses-message {
-    margin: 1rem 0;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    margin: 0;
     padding: 1rem 1.25rem;
     border-radius: 16px;
     background-color: #69e96f;
@@ -34,7 +46,6 @@ body{
     font-weight: 600;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
-
 .hidden {
     display: none;
 }
